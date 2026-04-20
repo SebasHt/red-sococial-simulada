@@ -7,7 +7,7 @@ function Post({ usuario, texto, imagen }) {
   const [comentarios, setComentarios] = useState([]);
   const [nuevoComentario, setNuevoComentario] = useState("");
 
-  const handleAgregarComentario = () => {
+  const AgregarComentario = () => {
     if (nuevoComentario.trim() !== "") {
       setComentarios([...comentarios, nuevoComentario]);
       setNuevoComentario("");
@@ -49,7 +49,7 @@ function Post({ usuario, texto, imagen }) {
               onChange={(e) => setNuevoComentario(e.target.value)}
               placeholder="Escribe un comentario"
             />
-            <button onClick={handleAgregarComentario}>Enviar</button>
+            <button onClick={AgregarComentario}>Enviar</button>
             <ul>
               {comentarios.map((c, i) => (
                 <li key={i}>{c}</li>
