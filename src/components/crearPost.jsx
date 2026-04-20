@@ -42,7 +42,7 @@ export default function CrearPost() {
         <div key={post.id} className="container">
           <img
             className="fotoPerfil"
-            src="https://www.w3schools.com/w3images/avatar6.png"
+            src="https://www.w3schools.com/w3images/avatar2.png"
             alt="perfil"
           />
           <span className="tiempoP">{post.tiempo}</span>
