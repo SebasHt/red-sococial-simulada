@@ -1,20 +1,17 @@
-import './App.css'
 import Posst from './components/Posst'
 import Navbars from './components/navbars' 
 import CrearPost from './components/crearPost' 
 import MiniInfo from './components/miniInfo'
-import Reactru from 'react'
 
-
-function App() {
+export default function HomePage() {
   return (
     <div>
-     <Navbars />
+      <Navbars />
+      <div>
      <MiniInfo />
       <CrearPost/>
       <Posst />
+      </div>
     </div>
   )
 }
-
-export default App

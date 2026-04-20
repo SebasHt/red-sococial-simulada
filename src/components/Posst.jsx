@@ -1,0 +1,107 @@
+import React, { useState } from "react";
+import "./Posst.css"
+
+function Post() {
+  const [mostrarLike, setMostrarLike] = useState(false);
+  const [mostrarComentario, setMostrarComentario] = useState(false);
+  const [comentarios, setComentarios] = useState([]);
+  const [nuevoComentario, setNuevoComentario] = useState("");
+
+  const handleAgregarComentario = () => {
+    if (nuevoComentario.trim() !== "") {
+      setComentarios([...comentarios, nuevoComentario]);
+      setNuevoComentario("");
+    }
+  };
+
+  return (
+    <div>
+    <div className="container">
+      <img className="fotoPerfil" src="https://www.w3schools.com/w3images/avatar6.png"alt="perfil"/>
+      <span className="tiempoP">32 min</span>
+      <h4 className="nombreUsuario">agnes ortiz</h4>
+      <hr />
+      <p className="comentario">Have you seen this?</p>
+      <img className="imagenComentario" src="https://static.wikia.nocookie.net/yugiohenespanol/images/2/28/Foto_drag%C3%B3n_de_la_rosa_negra.jpg/revision/latest?cb=20120202064918&path-prefix=es" alt="comentario"/>
+      <p className="comentario">Lore ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <hr />
+      <div className="like-container">
+      <button type="button" onClick={() => setMostrarLike(!mostrarLike)}>Like</button>
+      {mostrarLike && <p className="like">👍</p>}
+      <button type="button" onClick={() => setMostrarComentario(!mostrarComentario)}> Comment</button>
+      {mostrarComentario && (
+        <div className="comentarios">
+          <input type="text" value={nuevoComentario} onChange={(e) => setNuevoComentario(e.target.value)}placeholder="Escribe un comentario"/>
+          <button onClick={handleAgregarComentario}>Enviar</button>
+          <ul>
+            {comentarios.map((c, i) => (
+              <li key={i}>{c}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+      </div>
+
+    </div>
+      <div className="container">
+      <img className="fotoPerfil" src="https://www.w3schools.com/w3images/avatar6.png"alt="perfil"/>
+      <span className="tiempoP">32 min</span>
+      <h4 className="nombreUsuario">Zara tacones</h4>
+      <hr />
+      <p className="comentario">Have you seen this?</p>
+      <p className="comentario">Lore ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <hr />
+      <div className="like-container">
+      <button type="button" onClick={() => setMostrarLike(!mostrarLike)}>Like</button>
+      {mostrarLike && <p className="like">👍</p>}
+      <button type="button" onClick={() => setMostrarComentario(!mostrarComentario)}> Comment</button>
+      {mostrarComentario && (
+        <div className="comentarios">
+          <input type="text" value={nuevoComentario} onChange={(e) => setNuevoComentario(e.target.value)}placeholder="Escribe un comentario"/>
+          <button onClick={handleAgregarComentario}>Enviar</button>
+          <ul>
+            {comentarios.map((c, i) => (
+              <li key={i}>{c}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+      </div>
+    </div>
+      <div className="container">
+      <img className="fotoPerfil" src="https://www.w3schools.com/w3images/avatar6.png"alt="perfil"/>
+      <span className="tiempoP">32 min</span>
+      <h4 className="nombreUsuario">Pertizol</h4>
+      <hr />
+      <p className="comentario">Have you seen this?</p>
+      <p className="comentario">Lore ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <hr />
+      <div className="like-container">
+      <button type="button" onClick={() => setMostrarLike(!mostrarLike)}>Like</button>
+      {mostrarLike && <p className="like">👍</p>}
+      <button type="button" onClick={() => setMostrarComentario(!mostrarComentario)}> Comment</button>
+      {mostrarComentario && (
+        <div className="comentarios">
+          <input type="text" value={nuevoComentario} onChange={(e) => setNuevoComentario(e.target.value)}placeholder="Escribe un comentario"/>
+          <button onClick={handleAgregarComentario}>Enviar</button>
+          <ul>
+            {comentarios.map((c, i) => (
+              <li key={i}>{c}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+      </div>
+    </div>
+  
+  
+  
+  </div>
+  
+  
+  );
+}
+
+export default Post;
+
+
