@@ -1,19 +1,15 @@
-import './App.css'
-import Posst from './components/Posst'
-import Navbars from './components/navbars' 
-import CrearPost from './components/crearPost' 
-import MiniInfo from './components/miniInfo'
-import Reactru from 'react'
-
+import { Route , Routes } from "react-router-dom"
+import HomePage from './components/pages/HomePage'
+import Notfound from './components/pages/Notfound'
+import Ajuste from './components/pages/Ajuste'
 
 function App() {
   return (
-    <div>
-     <Navbars />
-     <MiniInfo />
-      <CrearPost/>
-      <Posst />
-    </div>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="#" element={<Notfound />} />
+      <Route path="/ajustes" element={<Ajuste />} />
+    </Routes>
   )
 }
 

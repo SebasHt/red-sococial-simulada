@@ -33,3 +33,44 @@
 .creaPublicacion button:hover {
     background-color: #555555;
 }
+
+@media (max-width: 768px) {
+    .creaPublicacion {
+        width: 90%;
+        left: 5%;
+        top: 150px;
+        padding: 15px;
+    }
+
+    .creaPublicacion textarea,
+    .creaPublicacion input {
+        font-size: 14px;
+    }
+
+    .creaPublicacion button {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .creaPublicacion {
+        width: 95%;
+        left: auto;
+        top: auto;
+        position: static;
+        margin: 20px auto;
+        padding: 12px;
+    }
+
+    .creaPublicacion textarea,
+    .creaPublicacion input {
+        font-size: 12px;
+    }
+
+    .creaPublicacion button {
+        font-size: 12px;
+        padding: 6px;
+    }
+}
+

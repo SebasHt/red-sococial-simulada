@@ -1,32 +1,33 @@
-li{
-    list-style: none;
-}
-
 .navbar {
-    background-color: #000;
+    background-color: #1e1e1e;
     padding: 10px 20px;
 }
 
 .navbarLista {
     list-style: none;
+    display: flex;
+    justify-content: flex-start;
     margin: 0;
     padding: 0;
-    display: flex;
 }
 
-.listas, .listas-A {
-    color: #fff;
-    margin-left: 20px;
-    cursor: pointer;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    transition: color 0.3s ease;
+.listas{
+    margin-right: 20px;
 }
 
-.listas:hover, .listas-A:hover {
-    color: #ffcc00;
+.navbarLista a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
 }
+
+.navbarLista a:hover {
+    text-decoration: underline;
+}
+
 
 .listas-A {
     margin-left: auto;
 }
+

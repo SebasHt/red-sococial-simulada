@@ -1,16 +1,16 @@
-import Posst from './components/Posst'
-import Navbars from './components/navbars' 
-import CrearPost from './components/crearPost' 
-import MiniInfo from './components/miniInfo'
+import Post from '../Post'
+import Navbars from '../navbars' 
+import CrearPost from '../crearPost' 
+import MiniInfo from '../miniInfo'
 
 export default function HomePage() {
   return (
     <div>
       <Navbars />
       <div>
-     <MiniInfo />
-      <CrearPost/>
-      <Posst />
+        <MiniInfo />
+        <CrearPost/>
+        <Post />
       </div>
     </div>
   )

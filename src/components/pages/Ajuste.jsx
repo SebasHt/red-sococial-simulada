@@ -5,7 +5,7 @@ export default function Ajuste() {
   return (
     <div>
         <Navbars />
-        <Ajuste />
+        <Ajustes />
     </div>
   )
 }
