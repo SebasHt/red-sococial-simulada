@@ -16,11 +16,7 @@ function Post({ usuario, texto, imagen }) {
 
   return (
     <div className="container">
-      <img
-        className="fotoPerfil"
-        src="https://www.w3schools.com/w3images/avatar6.png"
-        alt="perfil"
-      />
+      <img className="fotoPerfil" src="https://www.w3schools.com/w3images/avatar6.png"alt="perfil"/>
       <span className="tiempoP">32 min</span>
       <h4 className="nombreUsuario">{usuario}</h4>
       <hr />
@@ -35,9 +31,7 @@ function Post({ usuario, texto, imagen }) {
           Like
         </button>
         {mostrarLike && <p className="like">👍</p>}
-        <button
-          type="button"
-          onClick={() => setMostrarComentario(!mostrarComentario)}
+        <button type="button" onClick={() => setMostrarComentario(!mostrarComentario)}
         >
           Comment
         </button>

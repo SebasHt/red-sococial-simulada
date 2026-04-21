@@ -1,8 +1,11 @@
 import React, { useState } from "react";
-import './publicar.css'
+import './publicar.css';
 
 export default function CrearPost() {
-  const [publicacion, setPublicacion] = useState([]);
+  const [publicacion, setPublicacion] = useState(() => {
+    const guardadas = localStorage.getItem("publicaciones");
+    return guardadas ? JSON.parse(guardadas) : [];
+  });
   const [texto, setTexto] = useState("");
   const [imagen, setImagen] = useState("");
 
@@ -15,7 +18,9 @@ export default function CrearPost() {
         texto,
         imagen,
       };
-      setPublicacion([nuevaPublicacion, ...publicacion]);
+      const nuevas = [nuevaPublicacion, ...publicacion];
+      setPublicacion(nuevas);
+      localStorage.setItem("publicaciones", JSON.stringify(nuevas));
       setTexto("");
       setImagen("");
     }
