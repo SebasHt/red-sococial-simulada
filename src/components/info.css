@@ -1,0 +1,50 @@
+.containerInfo {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    width: 450px;
+    max-width: 90%;
+    padding: 20px;
+    border-radius: 8px;
+    position: fixed;
+    left: 80px;
+    top: 100px;
+    font-family: Arial, sans-serif;
+}
+
+.avatarInfo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 15px auto;
+}
+
+.texto {
+    display: block;
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .containerInfo {
+        width: 90%;
+        left: 5%;
+        top: 50px;
+        padding: 15px;
+    }
+
+    .avatarInfo {
+        width: 80px;
+        height: 80px;
+    }
+
+    .texto {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .containerInfo {
+        display: none;
+    }
+}
