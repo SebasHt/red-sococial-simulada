@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function barraContactos() {
+export default function ChatPage() {
   return (
     <div>
-        
+
     </div>
   )
 }

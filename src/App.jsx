@@ -6,7 +6,8 @@ import Ajuste from './components/pages/Ajuste'
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<HomePage />} />
+      <Route></Route>
+      <Route path="/home" element={<HomePage />} />
       <Route path="#" element={<Notfound />} />
       <Route path="/ajustes" element={<Ajuste />} />
     </Routes>
