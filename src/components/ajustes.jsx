@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './ajustes.css';
+import './css/ajustes.css';
 
 export default function Ajustes() {
   const [oscuro, setOscuro] = useState(() => {

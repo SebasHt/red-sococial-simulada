@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import './publicar.css';
+import './css/publicar.css';
 
 export default function CrearPost() {
   const [publicacion, setPublicacion] = useState(() => {

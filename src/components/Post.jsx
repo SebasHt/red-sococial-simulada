@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Posst.css"
+import "./css/Posst.css"
 
 function Post({ usuario, texto, imagen }) {
   const [mostrarLike, setMostrarLike] = useState(false);

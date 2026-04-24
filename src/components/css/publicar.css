@@ -4,7 +4,7 @@
     width: 450px;
     padding: 20px;
     border-radius: 8px;
-    position: fixed;
+    position:relative;
     left: 80px;
     top: 350px;
     font-family: Arial, sans-serif;
