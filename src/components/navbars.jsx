@@ -25,7 +25,7 @@ export default function Navbars({ user, onlogout }) {
         </li>
 
         <li className="listas-A">
-          <button onClick={onlogout} className="nav-link">LogOut</button>
+          <button onClick={onlogout} className="nav-link">Cerrar secion</button>
         </li>
 
         <li className="listas-A">

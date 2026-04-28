@@ -1,7 +1,7 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import "../css/login.css"
 
 export default function LoginPage({ onLogin }) {
@@ -21,8 +21,7 @@ export default function LoginPage({ onLogin }) {
   };
 
   return (
-    <>
-    <div class='formularioLogin'>
+    <div className="formularioLogin">
       <h1>Inicie sesión</h1>
       <form onSubmit={handleSubmit(onSubmited)}>
         <div>
@@ -43,9 +42,9 @@ export default function LoginPage({ onLogin }) {
           {errors.contrasena && <p>Debes escribir una contraseña</p>}
         </div>
 
-        <button type="submit" class='Boton'>Submit</button>
+        <Link to="/register" className="Boton">Registrarse</Link>
+        <button type="submit" className="Boton">Submit</button>
       </form>
     </div>
-    </>
   );
 }
