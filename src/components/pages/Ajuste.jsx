@@ -4,7 +4,6 @@ import Navbars from '../navbars'
 export default function Ajuste() {
   return (
     <div>
-        <Navbars />
         <Ajustes />
     </div>
   )

@@ -1,6 +1,7 @@
 import axios from "axios"
 import { useNavigate } from "react-router-dom"
 import { useForm } from "react-hook-form"
+import "../css/registrar.css"
 
 export default function Registrar({ onLogin }) {
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
@@ -23,8 +24,8 @@ export default function Registrar({ onLogin }) {
   };
 
   return (
-    <div>
-      <h1>Registro</h1>
+    <div className="contenedor-registro">
+      <h1 className="tituloFormulario">Registro</h1>
       <form onSubmit={handleSubmit(onSubmited)}>
         
         <div>

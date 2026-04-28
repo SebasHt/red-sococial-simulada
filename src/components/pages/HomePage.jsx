@@ -6,7 +6,6 @@ import MiniInfo from '../miniInfo'
 export default function HomePage() {
   return (
     <div>
-      <Navbars />
       <div>
         <MiniInfo />
         <CrearPost/>

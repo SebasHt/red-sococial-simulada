@@ -1,5 +1,5 @@
-/* Contenedor principal del login */
-.formularioLogin {
+/* Contenedor principal */
+.contenedor-registro {
   background-color: #1e1e1e;
   color: #ffffff;
   width: 400px;
@@ -12,13 +12,13 @@
   transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
-.formularioLogin:hover {
+.contenedor-registro:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.5);
 }
 
 /* Título */
-.formularioLogin h1 {
+.tituloFormulario {
   text-align: center;
   font-size: 24px;
   font-weight: bold;
@@ -27,14 +27,14 @@
 }
 
 /* Labels e inputs */
-.formularioLogin label {
+.contenedor-registro label {
   display: block;
   margin-bottom: 6px;
   font-size: 14px;
   font-weight: 500;
 }
 
-.formularioLogin input {
+.contenedor-registro input {
   width: 100%;
   padding: 10px;
   margin-bottom: 14px;
@@ -46,24 +46,23 @@
   transition: border-color 0.3s ease;
 }
 
-.formularioLogin input:focus {
+.contenedor-registro input:focus {
   outline: none;
   border-color: #4a90e2;
   background-color: #333;
 }
 
 /* Mensajes de error */
-.formularioLogin p {
+.contenedor-registro p {
   color: #ff6b6b;
   font-size: 12px;
   margin-top: -8px;
   margin-bottom: 10px;
 }
 
-/* Botones */
-.Boton {
-  display: inline-block;
-  width: 48%;
+/* Botón */
+.contenedor-registro button {
+  width: 100%;
   padding: 12px;
   background-color: #4a90e2;
   color: #ffffff;
@@ -72,44 +71,37 @@
   cursor: pointer;
   font-weight: bold;
   font-size: 15px;
-  text-align: center;
   transition: background 0.3s ease;
-  margin: 5px 1%;
 }
 
-.Boton:hover {
+.contenedor-registro button:hover {
   background-color: #357ab8;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .formularioLogin {
+  .contenedor-registro {
     width: 90%;
     padding: 20px;
   }
 
-  .formularioLogin h1 {
+  .tituloFormulario {
     font-size: 20px;
-  }
-
-  .Boton {
-    width: 100%;
-    margin: 10px 0;
   }
 }
 
 @media (max-width: 480px) {
-  .formularioLogin {
+  .contenedor-registro {
     width: 95%;
     padding: 15px;
   }
 
-  .formularioLogin h1 {
+  .tituloFormulario {
     font-size: 18px;
   }
 
-  .formularioLogin input,
-  .Boton {
+  .contenedor-registro input,
+  .contenedor-registro button {
     font-size: 13px;
     padding: 8px;
   }
