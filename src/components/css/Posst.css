@@ -1,0 +1,136 @@
+/* Contenedor principal del post */
+.containers {
+  background-color: #1e1e1e;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 20px auto;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease;
+}
+
+.containers:hover {
+  transform: translateY(-2px);
+}
+
+/* Subcontenedor */
+.Container2 {
+  margin-top: 0;
+  padding: 0;
+}
+
+/* Perfil */
+.fotoPerfil {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 12px;
+  border: 2px solid #4a90e2;
+}
+
+.nombreUsuario {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 8px;
+}
+
+.tiempoP {
+  font-size: 12px;
+  color: #bbb;
+  margin-left: 6px;
+}
+
+/* Comentario */
+.comentario {
+  margin: 12px 0;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* Imagen dentro del post */
+.imagenComentario {
+  max-width: 100%;
+  border-radius: 8px;
+  margin: 12px 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+/* Botones */
+button {
+  background-color: #4a90e2;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  margin: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #357ab8;
+}
+
+/* Likes */
+.like {
+  font-size: 18px;
+  margin-top: 6px;
+  color: #4a90e2;
+}
+
+.like-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Área de comentarios */
+.comentarios {
+  margin-top: 15px;
+}
+
+.comentarios input {
+  padding: 8px;
+  border: 1px solid #444;
+  border-radius: 6px;
+  width: 70%;
+  margin-right: 8px;
+  background-color: #2a2a2a;
+  color: #fff;
+}
+
+.comentarios input:focus {
+  outline: none;
+  border-color: #4a90e2;
+}
+
+.comentarios button {
+  background-color: #28a745;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.comentarios button:hover {
+  background-color: #218838;
+}
+
+.comentarios ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 12px;
+}
+
+.comentarios li {
+  background: #2a2a2a;
+  padding: 8px;
+  border-radius: 6px;
+  margin-bottom: 6px;
+  font-size: 14px;
+}

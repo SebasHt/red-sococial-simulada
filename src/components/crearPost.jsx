@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import './publicar.css';
+import './css/publicar.css';
 
 export default function CrearPost() {
   const [publicacion, setPublicacion] = useState(() => {
@@ -44,7 +44,7 @@ export default function CrearPost() {
       </div>
 
       {publicacion.map((post) => (
-        <div key={post.id} className="container">
+        <div key={post.id} className="containers">
           <img
             className="fotoPerfil"
             src="https://www.w3schools.com/w3images/avatar2.png"

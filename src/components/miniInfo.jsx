@@ -1,5 +1,5 @@
 import {useState} from 'react'
-import './info.css'
+import './css/info.css'
 
 
 export default function MiniInfo() {

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Posst.css"
+import "./css/Posst.css"
 
 function Post({ usuario, texto, imagen }) {
   const [mostrarLike, setMostrarLike] = useState(false);
@@ -15,7 +15,7 @@ function Post({ usuario, texto, imagen }) {
   };
 
   return (
-    <div className="container">
+    <div className="containers">
       <img className="fotoPerfil" src="https://www.w3schools.com/w3images/avatar6.png"alt="perfil"/>
       <span className="tiempoP">32 min</span>
       <h4 className="nombreUsuario">{usuario}</h4>
@@ -26,7 +26,7 @@ function Post({ usuario, texto, imagen }) {
       )}
       <p className="comentario">{texto}</p>
       <hr />
-      <div className="like-container">
+      <div className="like-containers">
         <button type="button" onClick={() => setMostrarLike(!mostrarLike)}>
           Like
         </button>
@@ -58,7 +58,7 @@ function Post({ usuario, texto, imagen }) {
 
 export default function Posst() {
   return (
-    <div>
+    <div className="container2">
       <Post
         usuario="agnes ortiz"
         texto="Lore ipsum dolor sit amet, consectetur adipisicing elit..."
