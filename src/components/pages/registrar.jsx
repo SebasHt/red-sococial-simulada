@@ -23,49 +23,42 @@ export default function Registrar({ onLogin }) {
   };
 
   return (
-    <div className='container'>
-      <div className='row justify-content-center'>
-        <div className='col-sm-8'>
-          <h1 className='text-center text-primary my-5'>Registro</h1>
+    <div>
+      <h1>Registro</h1>
+      <form onSubmit={handleSubmit(onSubmited)}>
+        
+        <div>
+          <label>Nombre</label>
+          <input type="text" {...register("nombre", { required: true })} />
+          {errors.nombre && <p>Debes escribir un Nombre</p>}
         </div>
-        <div className='col-sm-8'>
-          <form onSubmit={handleSubmit(onSubmited)} className='bg-body-secondary p-3 rounded'>
-            
-            <div className="mb-3">
-              <label className="form-label">Nombre</label>
-              <input type="text" {...register("nombre", { required: true })} className="form-control" />
-              {errors.nombre && <p className='text-danger'>Debes escribir un Nombre</p>}
-            </div>
 
-            <div className="mb-3">
-              <label className="form-label">Email address</label>
-              <input type="email" {...register("correo", { required: true })} className="form-control" />
-              {errors.correo && <p className='text-danger'>Debes escribir un correo</p>}
-            </div>
-
-            <div className="mb-3">
-              <label className="form-label">Password</label>
-              <input type="password" {...register("contrasena", { required: true })} className="form-control" />
-              {errors.contrasena && <p className='text-danger'>Debes escribir una contraseña</p>}
-            </div>
-
-            <div className="mb-3">
-              <label className="form-label">Confirmar Password</label>
-              <input
-                type="password"
-                {...register("confirmar_contrasena", {
-                  required: "Por favor digite una contraseña",
-                  validate: (value) => value === contra || "La contraseña no coincide"
-                })}
-                className="form-control"
-              />
-              {errors.confirmar_contrasena && <p className='text-danger'>{errors.confirmar_contrasena.message}</p>}
-            </div>
-
-            <button type="submit" className="btn btn-primary">Submit</button>
-          </form>
+        <div>
+          <label>Email address</label>
+          <input type="email" {...register("correo", { required: true })} />
+          {errors.correo && <p>Debes escribir un correo</p>}
         </div>
-      </div>
+
+        <div>
+          <label>Password</label>
+          <input type="password" {...register("contrasena", { required: true })} />
+          {errors.contrasena && <p>Debes escribir una contraseña</p>}
+        </div>
+
+        <div>
+          <label>Confirmar Password</label>
+          <input
+            type="password"
+            {...register("confirmar_contrasena", {
+              required: "Por favor digite una contraseña",
+              validate: (value) => value === contra || "La contraseña no coincide"
+            })}
+          />
+          {errors.confirmar_contrasena && <p>{errors.confirmar_contrasena.message}</p>}
+        </div>
+
+        <button type="submit">Submit</button>
+      </form>
     </div>
   );
 }

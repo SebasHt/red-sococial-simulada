@@ -1,63 +1,88 @@
+/* Panel de configuración */
 .contenedorConfiguracion {
-    background-color: #1e1e1e;
-    color: #ffffff;
-    width: 1300px;
-    padding: 20px;
-    border-radius: 8px;
-    position: fixed;
-    left: 50%;
-    top: 120px;
-    transform: translateX(-50%);
-    font-family: Arial, sans-serif;
+  background-color: #1e1e1e;
+  color: #ffffff;
+  width: 100%;
+  max-width: 1200px;
+  padding: 25px;
+  border-radius: 12px;
+  position: fixed;
+  left: 50%;
+  top: 120px;
+  transform: translateX(-50%);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
+.contenedorConfiguracion:hover {
+  transform: translateX(-50%) translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+/* Contenido interno */
 .cambio {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
+/* Texto */
 .cambio p {
-    font-size: 14px;
-    margin: 0;
-    order: 1;
+  font-size: 15px;
+  margin: 0;
+  order: 1;
+  font-weight: 500;
 }
 
+/* Botón */
 .cambioColor {
-    background-color: #333333;
-    color: #ffffff;
-    border: none;
-    border-radius: 4px;
-    padding: 10px 15px;
-    cursor: pointer;
-    order: 2;
+  background-color: #4a90e2;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 18px;
+  cursor: pointer;
+  order: 2;
+  font-weight: bold;
+  transition: background 0.3s ease;
 }
-
-
 
 .cambioColor:hover {
-    background-color: #555555;
+  background-color: #357ab8;
 }
 
+/* Responsive tablet */
 @media (max-width: 768px) {
-    .contenedorConfiguracion {
-        width: 90%;
-        top: 80px;
-        padding: 15px;
-    }
+  .contenedorConfiguracion {
+    width: 90%;
+    top: 80px;
+    padding: 18px;
+  }
 
-    .cambio {
-        flex-direction: column;
-        align-items: stretch;
-    }
+  .cambio {
+    flex-direction: column;
+    align-items: stretch;
+  }
 
-    .cambioColor {
-        width: 100%;
-        margin: 10px 0;
-    }
+  .cambioColor {
+    width: 100%;
+    margin: 12px 0;
+  }
 
-    .cambio p {
-        text-align: center;
-        margin-bottom: 10px;
-    }
+  .cambio p {
+    text-align: center;
+    margin-bottom: 12px;
+  }
+}
+
+/* Responsive móvil */
+@media (max-width: 480px) {
+  .contenedorConfiguracion {
+    width: 95%;
+    top: auto;
+    position: static;
+    margin: 20px auto;
+    padding: 15px;
+  }
 }
