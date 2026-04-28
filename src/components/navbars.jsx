@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import './css/navbar.css'
 
-export default function Navbars() {
+export default function Navbars({user ,onlogout}) {''
   return (
 <div className="navbar">
       <ul className="navbarLista">
@@ -19,7 +19,9 @@ export default function Navbars() {
 
         <li></li>
 
-        <li></li>
+        <li className="listas-A">
+            <a class="nav-link" ><span className="btn btn-danger" onClick={onlogout}></span></a>
+        </li>
 
         <li className="listas-A">
           <NavLink   to="/ajustes"className={({ isActive }) => isActive ? "w3-red w3-bar-item w3-button  w3-mobile " : "w3-bar-item w3-button  w3-mobile "}> Cuenta </NavLink>
