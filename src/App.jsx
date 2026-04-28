@@ -5,6 +5,7 @@ import Notfound from './components/pages/Notfound'
 import Ajuste from './components/pages/Ajuste'
 import Loginpage from './components/pages/Loginpage'
 import Registrar from "./components/pages/registrar"
+import Navbars from "./components/Navbars"
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(localStorage.getItem('isAuthenticated') === "true")
@@ -28,13 +29,16 @@ function App() {
   }
 
   return (
-    <Routes>
-      <Route path="/home" element={isAuthenticated ? <HomePage user={userName} onlogout={handleLogout} /> : <Navigate to="/login" />} />
-      <Route path="/ajustes" element={isAuthenticated ? <Ajuste /> : <Navigate to="/login" />} />
-      <Route path="/login" element={isAuthenticated ? <Navigate to="/home" /> : <Loginpage onLogin={handleLogin} />} />
-      <Route path="/register" element={isAuthenticated ? <Navigate to="/home" /> : <Registrar onLogin={handleLogin} />} />
-      <Route path="*" element={<Notfound />} />
-    </Routes>
+    <>
+      {isAuthenticated && <Navbars user={userName} onlogout={handleLogout} />}
+      <Routes>
+        <Route path="/home" element={isAuthenticated ? <HomePage user={userName} /> : <Navigate to="/login" />} />
+        <Route path="/ajustes" element={isAuthenticated ? <Ajuste /> : <Navigate to="/login" />} />
+        <Route path="/login" element={isAuthenticated ? <Navigate to="/home" /> : <Loginpage onLogin={handleLogin} />} />
+        <Route path="/register" element={isAuthenticated ? <Navigate to="/home" /> : <Registrar onLogin={handleLogin} />} />
+        <Route path="*" element={<Notfound />} />
+      </Routes>
+    </>
   )
 }
 
